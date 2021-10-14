@@ -1,5 +1,5 @@
-import { Destroy, EqualityChecker, GetState, SetState, State, StateCreator, StateSelector, StoreApi, Subscribe } from './vanilla';
-export * from './vanilla';
+import { Destroy, EqualityChecker, GetState, SetState, State, StateCreator, StateSelector, StoreApi, Subscribe } from 'zustand/vanilla';
+export * from 'zustand/vanilla';
 export interface UseStore<T extends State> {
     (): T;
     <U>(selector: StateSelector<T, U>, equalityFn?: EqualityChecker<U>): U;

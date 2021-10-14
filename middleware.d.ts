@@ -1,4 +1,4 @@
-import { GetState, PartialState, SetState, State, StateCreator, StoreApi } from './vanilla';
+import { GetState, PartialState, SetState, State, StateCreator, StoreApi } from 'zustand/vanilla';
 export declare const redux: <S extends object, A extends {
     type: unknown;
 }>(reducer: (state: S, action: A) => S, initial: S) => (set: SetState<S>, get: GetState<S>, api: StoreApi<S> & {
@@ -29,20 +29,20 @@ export declare const devtools: <S extends object>(fn: (set: NamedSet<S>, get: Ge
     dispatch?: unknown;
     devtools?: any;
 }) => S;
-declare type Combine<T, U> = Omit<T, keyof U> & U;
+export declare type Combine<T, U> = Omit<T, keyof U> & U;
 export declare const combine: <PrimaryState extends object, SecondaryState extends object>(initialState: PrimaryState, create: (set: SetState<PrimaryState>, get: GetState<PrimaryState>, api: StoreApi<PrimaryState>) => SecondaryState) => StateCreator<Combine<PrimaryState, SecondaryState>, SetState<Combine<PrimaryState, SecondaryState>>>;
-declare type DeepPartial<T extends Object> = {
+export declare type DeepPartial<T extends Object> = {
     [P in keyof T]?: DeepPartial<T[P]>;
 };
 export declare type StateStorage = {
     getItem: (name: string) => string | null | Promise<string | null>;
     setItem: (name: string, value: string) => void | Promise<void>;
 };
-declare type StorageValue<S> = {
+export declare type StorageValue<S> = {
     state: DeepPartial<S>;
     version?: number;
 };
-declare type PersistOptions<S, PersistedState extends Partial<S> = Partial<S>> = {
+export declare type PersistOptions<S, PersistedState extends Partial<S> = Partial<S>> = {
     /** Name of the storage (must be unique) */
     name: string;
     /**

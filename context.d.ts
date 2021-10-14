@@ -1,6 +1,6 @@
 import { ReactNode } from 'react';
 import { EqualityChecker, UseStore } from 'zustand';
-import { State, StateSelector } from './vanilla';
+import { State, StateSelector } from 'zustand/vanilla';
 export interface UseContextStore<T extends State> {
     (): T;
     <U>(selector: StateSelector<T, U>, equalityFn?: EqualityChecker<U>): U;
