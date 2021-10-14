@@ -32,7 +32,7 @@ import { PersistOptions } from "typed-zustand/middleware";
    {
      "dependencies": {
        "zustand": "3.5.13",
-       "typed-zustand": "git://github.com/abraaoz/typed-zustand.git#3.5.13"
+       "typed-zustand": "3.5.13"
      }
    }
    ```
