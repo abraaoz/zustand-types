@@ -1,0 +1,22 @@
+{
+  "name": "typed-zustand",
+  "version": "3.5.13",
+  "description": "Zustand + TypeScript definitions",
+  "repository": "https://github.com/abraaoz/typed-zustand",
+  "author": "Abraão Zaidan<abraao.zaidan@gmail.com>",
+  "license": "MIT",
+  "private": false,
+  "peerDependencies": {
+    "react": ">=16.8",
+    "zustand": "3.5.13"
+  },
+  "peerDependenciesMeta": {
+    "react": {
+      "optional": true
+    }
+  },
+  "dependencies": {},
+  "devDependencies": {
+    "install-peers": "^1.0.3"
+  }
+}
