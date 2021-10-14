@@ -1,8 +1,8 @@
 {
-  "name": "typed-zustand",
+  "name": "zustand-types",
   "version": "3.5.13",
   "description": "Zustand + TypeScript definitions",
-  "repository": "https://github.com/abraaoz/typed-zustand",
+  "repository": "https://github.com/abraaoz/zustand-types",
   "author": "Abraão Zaidan<abraao.zaidan@gmail.com>",
   "license": "MIT",
   "private": false,

@@ -1,4 +1,4 @@
-# Typed Zustand
+# Zustand Types
 
 ## Motivation
 
@@ -11,7 +11,7 @@ Be able to import Zustand's types (TypeScript) into any project.
 import { PersistOptions } from "zustand/middleware";
 
 // ✔️ works!
-import { PersistOptions } from "typed-zustand/middleware";
+import { PersistOptions } from "zustand-types/middleware";
 ```
 
 ## How this repository was made
@@ -26,17 +26,45 @@ import { PersistOptions } from "typed-zustand/middleware";
 
 ## How to use
 
-1. Add the following into your project's `package.json`:
+1. Run `yarn add zustand-types@3.5.13 --dev`.
+
+   Your `package.json` should looks like:
 
    ```json
    {
      "dependencies": {
-       "zustand": "3.5.13",
-       "typed-zustand": "3.5.13"
+       "zustand": "3.5.13"
+     },
+     "devDependencies": {
+       "zustand-types": "3.5.13"
      }
    }
    ```
 
-   **WARNING: keep the same version for `zustand` and `typed-zustand`**
+   **WARNING: keep the same version for `zustand` and `zustand-types`**
 
-2. Change all imports in your project from `from 'zustand` to `from 'typed-zustand`
+2. Import any Zustand type definition from zustand-types, like this:
+
+   ```javascript
+   import {
+     NamedSet,
+     Combine,
+     DeepPartial,
+     StateStorage,
+     StorageValue,
+     PersistOptions,
+   } from "zustand-types/middleware";
+
+   import {
+     State,
+     PartialState,
+     StateSelector,
+     EqualityChecker,
+     StateListener,
+     StateSliceListener,
+     SetState,
+     GetState,
+     Destroy,
+     StateCreator,
+   } from "zustand-types/vanilla";
+   ```
